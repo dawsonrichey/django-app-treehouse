@@ -1,9 +1,16 @@
 <h1>Count Page</h1>
 
-{{ hithere }}
+<a href="{% url 'home' %}">Start Again</a>
+<p>There are {{ count }} words</p>
 
-<form action="">
-    <textarea cols="40" rows="5" name="fulltext"></textarea>
-    <br/>
-    <input type="submit" value="Count!" />
-</form>
+<h1>Fulltext Below:</h1>
+
+{{ fulltext }}
+<br/>
+<br/>
+{% for word, counttotal in sortedwords %}
+{{ word }} - {{ counttotal }}
+<br />
+
+<br />
+{% endfor%}
