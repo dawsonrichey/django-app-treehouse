@@ -5,6 +5,10 @@ THIS IS HTML GUYS COOL STUFF!!!
 
 
 <form action="{% url 'count' %}">
+    <label for="username">Username</label>
+    <input name="username" type="text"/>
+    <label for="passw">Password</label>
+    <input name="passw" type="text"/>
     <textarea cols="40" rows="5" name="fulltext"></textarea>
     <br/>
     <input type="submit" value="Count!" />
